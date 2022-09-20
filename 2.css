@@ -1,0 +1,633 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    position: relative;
+    font-size: 5rem;
+    font-family: sans-serif;
+    -webkit-text-stroke: 0.3vw #383d52;
+    text-transform: uppercase;
+    top: -280px;
+}
+
+h2::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: red;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid red;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+    -webkit-animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+
+    0% {
+        width: 0;
+    }
+
+    70% {
+        width: 100%;
+    }
+
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+.drums {
+    background-color: white;
+    width: 800px;
+    height: 400px;
+    position: absolute;
+}
+
+.bassPedal {
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 100px);
+    z-index: 3;
+    border: solid 15px black;
+}
+
+.bassPedalBody {
+    width: 210px;
+    height: 205px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 95px);
+    z-index: 2;
+    border: solid 5px black;
+}
+
+.bassPedalFootright {
+    width: 15px;
+    height: 60px;
+    position: absolute;
+    top: 85.5%;
+    right: 35%;
+    z-index: 2;
+    border-radius: 0 0 5px 20px;
+    background-color: black;
+    transform: rotate(-25deg);
+}
+
+.bassPedalFootLeft {
+    width: 15px;
+    height: 60px;
+    position: absolute;
+    top: 85.5%;
+    left: 39%;
+    z-index: 2;
+    border-radius: 0 0 20px 5px;
+    background-color: black;
+    transform: rotate(25deg);
+}
+
+.holderHighAndMediumTomThree {
+    width: 80px;
+    height: 10px;
+    top: 20%;
+    left: 46.8%;
+    z-index: 4;
+    position: absolute;
+    background-color: black;
+}
+
+.holderHighAndMediumTomTwo {
+    width: 10px;
+    height: 80px;
+    top: 20%;
+    left: 51.25%;
+    z-index: 4;
+    position: absolute;
+    background-color: black;
+}
+
+.holderHighAndMediumTomOne {
+    width: 40px;
+    height: 10px;
+    top: 39%;
+    left: 49.3%;
+    z-index: 4;
+    border-radius: 10px 10px 5px 5px;
+    position: absolute;
+    background-color: black;
+}
+
+.HighTom {
+    width: 71px;
+    height: 25px;
+    background: white;
+    position: absolute;
+    top: 32px;
+    right: 273.5px;
+    border: solid 4px black;
+    z-index: 6;
+    border-radius: 50%;
+}
+
+.HighTomOne {
+    left: 304px;
+    top: 113px;
+    z-index: 10;
+    width: 72px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+    border: solid 3px black;
+    position: absolute;
+}
+
+.HighTomTwo {
+    left: 306.2px;
+    top: 112px;
+    z-index: 10;
+    width: 75.5px;
+    height: 25px;
+    border-radius: 40%;
+    background-color: red;
+    position: absolute;
+}
+
+.HighTomThree {
+    width: 75px;
+    height: 90px;
+    background: red;
+    position: absolute;
+    top: 39.7px;
+    left: 37.9%;
+    border-radius: 10px;
+    border: solid 3px black;
+    z-index: 5;
+}
+
+.MediumTom {
+    width: 71px;
+    height: 25px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 31px;
+    border: solid 4px black;
+    left: 304.5px;
+    z-index: 6;
+}
+
+.MediumTomOne {
+    right: 274px;
+    top: 113px;
+    z-index: 10;
+    width: 72px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+    border: solid 3px black;
+    position: absolute;
+}
+
+.MediumTomTwo {
+    right: 275px;
+    top: 112px;
+    z-index: 10;
+    width: 75.5px;
+    height: 25px;
+    border-radius: 40%;
+    background-color: red;
+    position: absolute;
+}
+
+.MediumTomThree {
+    width: 75px;
+    height: 90px;
+    background: rgb(255, 0, 0);
+    position: absolute;
+    top: 39.7px;
+    left: 55.8%;
+    border-radius: 10px;
+    border: solid 3px black;
+    z-index: 5;
+}
+
+.snareDrum {
+    width: 100px;
+    height: 35px;
+    background: white;
+    position: absolute;
+    left: 150px;
+    border-radius: 50%;
+    top: 195px;
+    border: solid 4px black;
+    z-index: 4;
+}
+
+.snareDrumOne {
+    width: 100px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    left: 147.9px;
+    border-radius: 10px 5px 10px 10px;
+    top: 210.5px;
+    transform: rotate(5deg);
+    border: solid 4px black;
+}
+
+.snareDrumTwo {
+    width: 100px;
+    height: 35px;
+    background: red;
+    position: absolute;
+    left: 146px;
+    border-radius: 50%;
+    top: 239px;
+    border: solid 4px black;
+    z-index: 2;
+}
+
+.snareDrumThree {
+    width: 100px;
+    height: 35px;
+    background: red;
+    position: absolute;
+    left: 150.5px;
+    border-radius: 50%;
+    top: 235px;
+    transform: rotate(1deg);
+    z-index: 2;
+}
+
+.snareDrumFour {
+    width: 100px;
+    height: 35px;
+    background: red;
+    position: absolute;
+    left: 150.3px;
+    border-radius: 40%;
+    top: 239px;
+    transform: rotate(2deg);
+    z-index: 2;
+}
+
+.holderSnareDrumOne {
+    width: 10px;
+    height: 50px;
+    background: black;
+    position: absolute;
+    left: 193px;
+    border-radius: 40px;
+    top: 267px;
+    transform: rotate(5deg);
+    z-index: 0;
+}
+
+.holderSnareDrumTwo {
+    width: 10px;
+    height: 40px;
+    background: black;
+    position: absolute;
+    left: 191px;
+    border-radius: 40px;
+    top: 310px;
+    z-index: 0;
+}
+
+.holderSnareDrumThree {
+    width: 10px;
+    height: 45px;
+    background: black;
+    position: absolute;
+    left: 202px;
+    border-radius: 40px;
+    top: 337px;
+    transform: rotate(-35deg);
+    z-index: 0;
+}
+
+.holderSnareDrumFour {
+    width: 10px;
+    height: 45px;
+    background: black;
+    position: absolute;
+    left: 180px;
+    border-radius: 40px;
+    top: 337px;
+    transform: rotate(30deg);
+    z-index: 0;
+}
+
+.holderSnareDrumFive {
+    width: 10px;
+    height: 25px;
+    background: black;
+    position: absolute;
+    left: 180px;
+    border-radius: 40px;
+    top: 337px;
+    transform: rotate(60deg);
+    z-index: 0;
+}
+
+.holderSnareDrumSix {
+    width: 10px;
+    height: 25px;
+    background: black;
+    position: absolute;
+    left: 200px;
+    border-radius: 40px;
+    top: 337px;
+    transform: rotate(-60deg);
+    z-index: 0;
+}
+
+.hi_hats {
+    width: 120px;
+    height: 10px;
+    border-radius: 20px 20px 0 0;
+    background: rgb(229, 255, 0);
+    position: absolute;
+    top: 130px;
+    left: 60px;
+    z-index: 1;
+    transform: rotate(20deg);
+}
+
+.hi_hats::before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 10px;
+    border-radius: 0 0 20px 20px;
+    background: inherit;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+}
+
+.holder_hi_hats_one {
+    width: 10px;
+    height: 100px;
+    position: absolute;
+    background-color: black;
+    top: 120px;
+    left: 105px;
+    border-radius: 50px 50px 50px 60px;
+    transform: rotate(20deg);
+}
+
+.holder_hi_hats_two {
+    width: 10px;
+    height: 130px;
+    position: absolute;
+    background-color: black;
+    top: 209px;
+    left: 89.7px;
+    border-radius: 40px 0 50px 50px;
+}
+
+.holder_hi_hats_three {
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    background-color: black;
+    top: 330px;
+    left: 82px;
+    border-radius: 50px;
+    transform: rotate(20deg);
+}
+
+.holder_hi_hats_four {
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    background-color: black;
+    top: 330px;
+    left: 98px;
+    border-radius: 50px;
+    transform: rotate(-25deg);
+}
+
+.holder_hi_hats_five {
+    width: 10px;
+    height: 30px;
+    position: absolute;
+    background-color: black;
+    top: 330px;
+    left: 100px;
+    border-radius: 50px;
+    transform: rotate(-50deg);
+}
+
+.holder_hi_hats_six {
+    width: 10px;
+    height: 30px;
+    position: absolute;
+    background-color: black;
+    top: 330px;
+    left: 80px;
+    border-radius: 50px;
+    transform: rotate(50deg);
+}
+
+.floorTom {
+    width: 100px;
+    height: 20px;
+    background: white;
+    border: solid 4px black;
+    border-radius: 5px;
+    position: absolute;
+    top: 195px;
+    border-radius: 50%;
+    z-index: 4;
+    right: 140px;
+}
+
+.floorTomOne {
+    position: absolute;
+    top: 200px;
+    border-radius: 15px;
+    border: solid 4px black;
+    right: 140px;
+    width: 100px;
+    height: 150px;
+    background-color: red;
+    z-index: 1;
+}
+
+.floorTomTwo {
+    width: 100px;
+    height: 20px;
+    background: red;
+    border: solid 4px black;
+    border-radius: 5px;
+    position: absolute;
+    top: 334.8px;
+    border-radius: 50%;
+    z-index: 0;
+    right: 140px;
+}
+
+.floorTomThree {
+    width: 100px;
+    height: 20px;
+    background: red;
+    border-radius: 5px;
+    position: absolute;
+    top: 339px;
+    border-radius: 0 0 50% 50%;
+    z-index: 1;
+    right: 144px;
+}
+
+.holderFloorTomOne {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    background-color: black;
+    bottom: 25px;
+    right: 173px;
+    z-index: 0;
+    border-radius: 0 0 10px 20px;
+    transform: rotate(-30deg);
+}
+
+.holderFloorTomTwo {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    background-color: black;
+    bottom: 25px;
+    right: 200px;
+    z-index: 0;
+    border-radius: 0 0 20px 10px;
+    transform: rotate(30deg);
+}
+
+.holderFloorTomThree {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    background-color: black;
+    bottom: 15px;
+    right: 150px;
+    z-index: 0;
+    border-radius: 0 0 10px 20px;
+    transform: rotate(-30deg);
+}
+
+.holderFloorTomFour {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    background-color: black;
+    bottom: 15px;
+    right: 223px;
+    z-index: 0;
+    border-radius: 0 0 20px 10px;
+    transform: rotate(30deg);
+}
+
+.rideCymbal {
+    width: 90px;
+    height: 10px;
+    background: #E5FF00;
+    transform: rotate(-30deg);
+    border-radius: 15px;
+    position: absolute;
+    top: 150px;
+    right: 60px;
+    z-index: 1;
+}
+
+.holderRideCymbalOne {
+    width: 8px;
+    height: 100px;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    top: 135px;
+    right: 83px;
+    transform: rotate(-30deg);
+}
+
+.holderRideCymbalTwo {
+    width: 8px;
+    height: 110px;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    top: 223px;
+    right: 60px;
+}
+
+.holderRideCymbalThree {
+    width: 8px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+    transform: rotate(-30deg);
+}
+
+.holderRideCymbalFour {
+    width: 8px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 25px;
+    right: 67px;
+    transform: rotate(20deg);
+}
+
+.holderRideCymbalFive {
+    width: 8px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 49px;
+    right: 70px;
+    transform: rotate(50deg);
+}
+
+.holderRideCymbalSix {
+    width: 8px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    transform: rotate(-60deg);
+}
+
+.sound {
+    background: rgb(185, 185, 185);
+}
+
+#audio {
+    opacity: 0;
+    display: none;
+}
